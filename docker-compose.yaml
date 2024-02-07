@@ -1,0 +1,9 @@
+version: "3.0"
+services:
+
+  dev-toolbox:
+    container_name: dev-toolbox
+    image: dev-toolbox:latest
+    volumes:
+      - ./api:/home/back
+    command: bash -c "cd /home/back/ && mvn clean install"

@@ -1,0 +1,44 @@
+version: "3.0"
+services:
+
+  api:
+    container_name: api-payara
+    image: payara/micro:5.2021.10-jdk11
+    build: 
+      context: ./dockerfile
+      dockerfile: payara.dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./api/target/api-0.0.1.war:/opt/payara/deployments/api-0.0.1.war
+    environment:
+      - JVM_ARGS=-Xmx4096m -Xms2048m
+    networks:
+      - api-net
+    depends_on:
+      - postgres-db
+
+  postgres-db:
+    container_name: api-postgres
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres/api-database:/var/lib/postgresql/data
+    networks:
+      - api-net
+      
+  pgadmin:
+    container_name: api-pgadmin
+    image: thajeztah/pgadmin4
+    ports:
+      - 5050:5050
+    networks:
+      - api-net
+    depends_on:
+      - postgres-db
+
+networks:
+  api-net:
+    driver: bridge
+    
