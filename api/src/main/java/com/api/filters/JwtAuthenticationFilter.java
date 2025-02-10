@@ -70,6 +70,7 @@ public class JwtAuthenticationFilter implements Filter {
 		String uri = httpRequest.getRequestURI();
 		String privateKeyHeaderValue = getBearerToken(httpRequest.getHeader(AUTH_HEADER_KEY));
 		//Premier If pour définir les uri qui ne seront pas filtré : ici on laisse accessible sans token OPEN_API_SERVICE et SWAGGER_UI
+		log.info(privateKeyHeaderValue);
 		if (!uri.contains(OPEN_API_SERVICE) && !uri.contains(SWAGGER_UI)) {
 			if (privateKeyHeaderValue == null || privateKeyHeaderValue.isEmpty()) {
 				log.warn("Token manquant dans le header HTTP.");

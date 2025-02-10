@@ -23,7 +23,7 @@ public class Bid {
 	@NotNull(message = "bid cannot be null.")
 	@Column(name = "bid")
 	private double bid;
-	@NotEmpty(message = "id_product cannot be null.")
+	@NotNull(message = "id_product cannot be null.")
 	@Column(name = "id_product")
 	private int idProduct;
 	@NotNull(message = "id_buyer cannot be null.")
