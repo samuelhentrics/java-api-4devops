@@ -1,1 +1,38 @@
-<app-bids-table></app-bids-table>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Mon Site</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Enchères</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-4">
+    <div class="container">
+      <h1 class="display-4">Bienvenue sur la plateforme d'enchères</h1>
+      <p class="lead">Trouvez les meilleures offres et enchérissez en toute sécurité.</p>
+    </div>
+  </header>
+  
+  <!-- Contenu -->
+  <div class="container mt-4">
+    <app-bids-table></app-bids-table>
+    <button class="btn btn-primary mt-3">Test Bootstrap</button>
+  </div>
+  
