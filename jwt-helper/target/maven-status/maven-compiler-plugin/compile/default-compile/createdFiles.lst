@@ -1,0 +1,4 @@
+com/jwt/JWTAlgorithm.class
+com/jwt/JWTException.class
+com/jwt/KeyGeneratorUtils.class
+com/jwt/JWTTokenHelper.class

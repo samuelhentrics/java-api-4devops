@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <h2>Liste des enchères</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Montant</th>
+          <th>ID Produit</th>
+          <th>ID Acheteur</th>
+          <th>ID Vendeur</th>
+          <th>Message</th>
+          <th>Date de Création</th>
+          <th>Active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bid of bids">
+          <td>{{ bid.id }}</td>
+          <td>{{ bid.bid }}</td>
+          <td>{{ bid.idProduct }}</td>
+          <td>{{ bid.idBuyer }}</td>
+          <td>{{ bid.idSeller }}</td>
+          <td>{{ bid.message }}</td>
+          <td>{{ bid.dateCreate | date:'short' }}</td>
+          <td>{{ bid.active ? '✅' : '❌' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
