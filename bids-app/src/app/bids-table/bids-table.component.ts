@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http'; // Ajoute ceci
 
 interface Bid {
   id: number;
@@ -17,7 +18,7 @@ interface Bid {
 @Component({
   selector: 'app-bids-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HttpClientModule], // Ajoute HttpClientModule ici
   templateUrl: './bids-table.component.html',
   styleUrls: ['./bids-table.component.css']
 })
