@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h1 class="mb-4">Ajouter une offre</h1>
+  
+    <div class="mb-3">
+      <label for="idProduct" class="form-label">ID Produit</label>
+      <input type="number" class="form-control" id="idProduct" [(ngModel)]="bid.idProduct" name="idProduct" required />
+    </div>
+  
+    <div class="mb-3">
+      <label for="idSeller" class="form-label">ID Vendeur</label>
+      <input type="number" class="form-control" id="idSeller" [(ngModel)]="bid.idSeller" name="idSeller" required />
+    </div>
+  
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" [(ngModel)]="bid.message" name="message" required></textarea>
+    </div>
+  
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" id="active" [(ngModel)]="bid.active" name="active" />
+      <label class="form-check-label" for="active">Actif</label>
+    </div>
+  
+    <button class="btn btn-primary" (click)="onSubmit()" [disabled]="!isFormValid()">Soumettre</button>
+  </div>
+  
