@@ -42,4 +42,22 @@ export class BidsTableComponent implements OnInit {
       error => console.error('Erreur lors de la récupération des enchères', error)
     );
   }
+
+  onEdit(bid: Bid): void {
+    console.log('Modification de l\'enchère', bid);
+  }
+
+  onDelete(bid: Bid): void {
+    const headers = new HttpHeaders({
+      'accept': 'application/json',
+      'Authorization': 'bearer ok'
+    });
+
+    this.http.delete(`${this.apiUrl}/${bid.id}`, { headers }).subscribe(
+      () => this.fetchBids(),
+      error => console.error('Erreur lors de la suppression de l\'enchère', error)
+    );
+
+    console.log('Suppression de l\'enchère', bid);
+  }
 }

@@ -13,6 +13,7 @@
           <th>Message</th>
           <th>Date de Création</th>
           <th>Active</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -28,6 +29,10 @@
             <span class="badge" [ngClass]="{'bg-success': bid.active, 'bg-danger': !bid.active}">
               {{ bid.active ? '✅' : '❌' }}
             </span>
+          </td>
+          <td>
+            <button class="btn btn-warning" (click)="onEdit(bid)">Modifier</button>
+            <button class="btn btn-danger" (click)="onDelete(bid)">Supprimer</button>
           </td>
         </tr>
       </tbody>
