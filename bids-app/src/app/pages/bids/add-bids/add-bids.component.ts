@@ -15,7 +15,7 @@ export class AddBidsComponent {
     bid: 0,
     idProduct: 0,
     idSeller: 0,
-    message: "",
+    message: " ",
     dateCreate: new Date().toISOString(),
     dateUpdate: new Date().toISOString(),
     active: true
