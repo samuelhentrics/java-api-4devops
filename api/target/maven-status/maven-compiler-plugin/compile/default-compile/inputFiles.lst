@@ -5,8 +5,8 @@
 /home/back/src/main/java/com/api/exception/technical/DAOException.java
 /home/back/src/main/java/com/api/initialize/MrPropertiesManager.java
 /home/back/src/main/java/com/api/exception/business/InvalidElementException.java
-/home/back/src/main/java/com/api/resources/BidResource.java
 /home/back/src/main/java/com/api/exception/mapper/DefaultExceptionMapper.java
+/home/back/src/main/java/com/api/resources/BidResource.java
 /home/back/src/main/java/com/api/exception/mapper/MrExceptionMapper.java
 /home/back/src/main/java/com/api/filters/Target.java
 /home/back/src/main/java/com/api/business/BidBusiness.java
