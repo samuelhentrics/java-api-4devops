@@ -9,19 +9,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Accueil</a>
+            <a class="nav-link active" href="/">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Enchères</a>
+            <a class="nav-link" href="/bids">Enchères</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="/contact">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   
+
+  
+
   <!-- Header -->
   <header class="bg-primary text-white text-center py-4">
     <div class="container">
@@ -29,10 +32,10 @@
       <p class="lead">Trouvez les meilleures offres et enchérissez en toute sécurité.</p>
     </div>
   </header>
+
+
+  <router-outlet></router-outlet>
   
-  <!-- Contenu -->
-  <div class="container mt-4">
-    <app-bids-table></app-bids-table>
-    <button class="btn btn-primary mt-3">Test Bootstrap</button>
-  </div>
+  
+  
   
