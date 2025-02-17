@@ -45,6 +45,22 @@ services:
     depends_on:
       - postgres-db
 
+  app:
+    image: node:23
+    container_name: bids-app
+    working_dir: /usr/src/app
+    volumes:
+      - ./bids-app:/usr/src/app
+    ports:
+      - "8000:3000"
+    networks:
+      - api-net
+    command: >
+      sh -c "npm install && npm start"
+    depends_on:
+      - api
+
+
 networks:
   api-net:
     driver: bridge
